@@ -1,0 +1,12 @@
+body {
+    display:flex;
+    padding:5px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+p {
+    padding:10px;
+    border: dotted black 2px;
+    width: 35%;
+}

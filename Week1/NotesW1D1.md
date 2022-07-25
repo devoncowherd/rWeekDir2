@@ -1,4 +1,6 @@
 
+---
+
 # HTML
 
 - Hypertext Markup Language
@@ -179,3 +181,55 @@
     - The first column is the number of `id` values in the selector
     - the third column is the number of tag selectors
 - specificity score is calculated, it's evaluated from left to right
+
+### Box Model
+
+- The Box model is the container that wraps around each HTML element in our page
+- It consists of four layers: (outermost to innermost) margin, border,  padding, and the content
+- Padding is spacing between the border and the content
+- The margin consists of spacing between the element and other elements
+
+```html
+<p align="center"><img src="./box_model.jpg"></p>
+```
+- Styling margins
+    - `margin`,`margin-bottom`,`margin-top`,`margin-left`, and `margin-left`;
+    - `margin` is a shorthand property
+    - can be adjusted using `em` percentages for ease
+    - If we use an absolute size, we can use `px`,`cm`, and `in`
+    - `shorthand`
+    - top, left, right precendence
+
+### Styling Borders
+
+- Border properties include `border`, `border-bottom`, `border-left`, `border-right`, and `border-color`;
+- `border` = can have shorthand properties too
+    - `dotted`, `solid`, `dashed`
+    - takes color names such as `black`, `blue`, `green`;
+- property(width,style,code) - > each side holds these
+
+### Styling Padding
+
+- We specify padding through one or more of the padding sides
+- `padding` encompasses
+    `padding-right`
+    `padding-bottom`
+    `padding-top`
+    `padding-left`
+- Each of these properties functions analogously to the corresponding margin property and takes width value
+
+### Responsive Web Design
+
+- Design Pattern to make Designs Responsive (device independent quality)
+- How?
+    - `viewport`
+        - viewport is html 5 to get device width
+    - `<picture>` for images
+    - `<source>` for elements that have media
+
+### Flexbox
+
+- responsive container for holding html elements
+- sets the display property for an element to `flex`
+- `flex-direction` -> determines how our elements are rendered
+    - `row` / `row-reverse`
