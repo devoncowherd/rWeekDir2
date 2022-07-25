@@ -1,0 +1,10 @@
+body {
+    background-color:tomato;
+    color:whitesmoke;
+    font-size: 1.5em;
+}
+
+tr,th,td {
+    padding:10px;
+    outline:solid black 1px;
+}
