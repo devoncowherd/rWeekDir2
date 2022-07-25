@@ -6,5 +6,6 @@ body {
 
 tr,th,td {
     padding:10px;
-    outline:solid black 1px;
+    background-color:rgba(20, 20, 20, 0.5);
+    outline:solid white 1px;
 }

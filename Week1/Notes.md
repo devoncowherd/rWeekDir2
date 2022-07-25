@@ -157,7 +157,7 @@
 
 - Syntax 
     ```css
-    body{
+    body {
         background-color:whitesmoke;
     }
     ```
@@ -170,3 +170,12 @@
 ```css
 <div style="background-color:tomato">
 ```
+
+### CSS Specificity 
+
+- A single element may match different rulesets
+- Any elementwith inline styling will have declarations
+- To determine precedence between internal and external rulesets we calculate to specify as follows through a three-column calculations
+    - The first column is the number of `id` values in the selector
+    - the third column is the number of tag selectors
+- specificity score is calculated, it's evaluated from left to right
