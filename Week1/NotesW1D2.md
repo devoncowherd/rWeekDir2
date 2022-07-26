@@ -176,3 +176,7 @@ let myFunction = function {
 }
 ```
 
+### Function Parameters
+
+- Exercises"
+    - Write a JS function that takes in a single parameter. If the parameter is divisible by 3, return 'fizz'. If the parameter is divisible by 5, return 'buzz'. If the parameter value is divisible by boith 3 and 5, return fizzbuzz.
