@@ -160,3 +160,19 @@ if(myObject) {
 - We can also perfor this check through th enull chaining operator (`?.`) when we're referring to an object's key
     - e.g. `myObject?.keyOne`
     - if the value before the question mark
+
+### Functions
+
+- functions in JS are first-class citizens which means we can work with functions by assigning them as values or the variable keys
+- We can use anonymous functions
+
+```js
+function funcName() {
+    //do some stuff
+}
+
+let myFunction = function {
+    //do some different stuff
+}
+```
+
