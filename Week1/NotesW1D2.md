@@ -122,5 +122,41 @@
 | `push()` | Adds the given element to the end of the array | 
 | `forEach()`| iterates across each element of the array |
 | `map()` | creates a new array with adjusted values if they are adjusted |
-| `reduce()` | console.log()|
+| `reduce()` | Iterates through the entire array and outputs the value as determined by the user expression |
 
+## Objects
+
+- Objects in JS are collections of key-value pairs, where the key and value are separated by a colon
+- We declare objects through an object literal with curly braces surrounded the key-value pairs
+
+```js
+let myObject ={
+    keyOne : 1,
+    keyTwo : 2
+}
+```
+
+- We can access the value associated with it by using `.` notation
+
+### Truthy/ Falsy Values
+
+- Falsy values are those that evaluate to false in a conditional expression or convert to false when ued in a Boolean expression
+- Falsy values in JS
+    - 0
+    - undefined
+    - null
+    - false
+    - NaN
+    - empty string (`''`, `""`)
+- We can use truthy, so it will evaluate to `true` in a conditional expression
+- Why? Falsy are used if we want toe nsrue that we're working with an object that has been initialized before we refer to a property of that object we can perform a **null check**
+
+```js
+if(myObject) {
+
+}
+```
+
+- We can also perfor this check through th enull chaining operator (`?.`) when we're referring to an object's key
+    - e.g. `myObject?.keyOne`
+    - if the value before the question mark
