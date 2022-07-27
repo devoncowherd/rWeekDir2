@@ -24,3 +24,4 @@ let numVar3 = 24;
 console.log(stringVar + numVar1);
 console.log(stringVar * numVar2);
 console.log(stringVar == numVar3);
+
