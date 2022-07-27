@@ -52,4 +52,15 @@
 
 <p style="align:center"><img src="../images/dommerino.png"></p>
 
-### Event Object
+### The Event Object
+
+- All events in JS inherit from the event object
+    - They inherit common properties from it
+    - Lets you manipulate propogation of events
+        - Bubbling = from inside first element
+        - Capturing = opposite bubbling
+        - `stopPropogation()` and `stopImmediatePropogation()`
+            - If there are event listeners on elements that haven't fired yet, they won't be invoked (traversal is stopped)
+            - `stopPropogation()` = stop subsequent events /`stopImmediatePropogation()` = stop current event
+        - `cancelBubble()`
+            - Boolean property that determines if the bubbling phase occurs for an event
