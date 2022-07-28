@@ -232,4 +232,96 @@ let myPromise = new Promise((resolve, reject) => {
 - When we instantiate a new promise, the executor function runs automatically
 - The promise constructor returns an object `state` and `result` properties
     - `state` is `pending` initially and becomees `fulfilled`
-    
+
+### Consuming Promises
+
+- Consuming functions for promises can be registerd using `then`, `catch`, and `finally` methods
+- `then()`
+    - has two parameters
+        - functions to invoke if it is resolved
+        - second is function to invoke when the promise is rejected
+            - this inner function takes a single parameter
+
+```js
+somePromise
+    .then((result) => {
+        console.log("Successful Promise");
+    },
+    (result) =>{
+        console.log("Failed Promise");
+})
+```
+
+- Catch is also used when a promise is rejected to handle errors
+- The inner function doesn't take any arguments
+- Finally executes at the end of the promise chain regardless of the result (resolve/reject)
+- Any async should return a promise
+    - Promises are often handled already, but we'll write the code to consume the result of the promise
+
+
+### Fetch API
+
+- The fetch API is a JS API available in browsers to easily to make callouts to external services
+    - `fetch()` to make the callout
+        - **Required** url
+        - **Optional** object (includes HTTP, headers, body, etc)
+- Returns a promise which we'll handle
+- When it resolves, it'll return an instance/object of the response class
+- The response class has properties we'll handle
+
+| Response Property | Holds |
+|  -----------------| ------|
+| status            |   http status code with response to our request    |
+| ok                | true if   200<= status  <= 299 |
+|        text()            | Reads the response and returns it as text through a promise     |
+| json() | Parses the response as json |
+| formData() | Returns the response as formData() |
+| blob() | Returns a blob |
+| ArrayBuffer() | returns ArrayBuffer |
+
+```js
+//added to the microtask queue
+const fetchPromise = fetch("https://someapi.com/")
+fetchPromise.then(response => {
+    return response.json();
+}).then(json => {
+    console.log(json);
+})
+.catch(){error =>{
+    console.error(error)
+    }
+}
+
+//executes while other operation is in queue
+console.log("Code line after fetch api call made");
+```
+
+### Async/Await keywords
+
+- The `async` and `await`
+
+```js
+async function executeAsyncOperation() {
+    let asyncOperationResult = await asyncOperation();
+}
+```
+- To implement error handling, we can wrap the `async` / `await` in side a `try{//some code}` `catch(){//handle error}` block
+
+### Try Catch
+
+- We can wrap code that may throw exception in the `try` block
+- Following the `try` block, we can use a `catch` block that handles the error. Lastly, we can use `finally` to do an operation regardless of the result
+
+
+```js
+try {
+    //some code
+} catch(error) {
+    //all types of exceptions are caught in this catch block
+} finally {
+    //It will still execute!...
+    //as long as the exception is handled 
+    //in a previous catch block or in 
+    //calling code
+}
+```
