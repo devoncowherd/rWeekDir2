@@ -130,7 +130,7 @@ function returnPrime(a) {
 
     for(let x = 0; x <= 2000; x++){
         next = x * 6 + 1;
-        if(a == 2 || a == 3 || a == ((6 * x) + 1) || a == ((6 * x) -1)) {
+        if(a == 2 || a == 3 || a == ((6 * x) + 1) || a == ((6 * x) -1) && a % 2 != 0 && a%3 != 0) {
             return a;
         } else if(a >= prev && a <= next) {
             return x * 6 + 1
