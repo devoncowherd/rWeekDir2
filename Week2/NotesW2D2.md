@@ -130,3 +130,95 @@ System.out.println(builder);
     - Deletion = removing an element
         - not possible in an array
 - Notation? BigO
+
+### Indexing
+
+- `[array.legth - 1]` = last element
+- `[0]` = first element
+- `array.copyOf(oldArray, oldArray.length - 1);` copies an array
+- `type[][] name = {{element,element2},{element,element2}}` multi-dimensional arrays
+    - `[1][0]` access second array
+    - `[row][column]`
+
+### Varargs
+
+- Where? `String [] args` in main
+- `...` 3 dots after data type
+```java
+//varargs = variable arguments
+//3 dots doesn't specify
+//you may include other arguments, but you may
+//only include one varargs
+public void printOutNames(int age,  String... names){
+    for(int i = 0; i < names.length; i++){
+        System.out.println(names[i]);
+    }
+}
+```
+
+
+### Testing
+
+- A scenario measuring the functionality across a set of actions or conditions to verify the expected results
+- Types:
+    - Unit Testing
+        - Isolate a bit of developed system works as expected
+    - Performance Testing
+        - Testing a system under load to see how it handles stress
+    - Functional Testing
+    - API Testing
+        - Postman API
+    - Smoke Testing
+    - Integration Testing
+        - Postman API
+    - Regression Testing
+    - Unit Testing
+        - TDD
+        - Mocking
+    - User Acceptance Testing
+    - System Testing
+        - E2E (Automation Testing)
+        - Testing to see if the entire system works as a whole
+        - Blackbox, white box, gray box
+            - Blackbox = not looking in assuming it works
+            - Whitebox = looking in the box assuming it doesn't work
+
+- Software Quality
+    - Degree of conformance to explicit or implicit requirements and expectations
+    - Cheaply, Quickly, or Well 😆
+- Testing Levels
+
+### Debugging
+
+- Breadcrumb debugging
+    - Leaving a readable trail in the console
+    - Quickly mucks up the terminal
+- IDE Debugging
+    - Use the IDE instead by adding breakpoints and debug mode
+
+### Design Patterns
+
+- Well, the patterns seek to solve a specific problem!
+- [Tutorials Point Examples](https://www.tutorialspoint.com/design_pattern/index.htm)
+
+```java
+class SingletonItem() {
+
+    private static SingletonItem singletonItem = null;
+    private String name;
+    private SingletonItem(String name){
+        this.name = name;
+    }
+
+    public static String getInstance(){
+        return this.name;
+    }
+}
+```
+
+- Why use singletons? Resource usage restriction upon devs
+- **Immediately Useful:**
+    - Builder Pattern
+        - Handles customization of item creation in a clean way
+    - Factory Pattern
+        - Automatically generate items
