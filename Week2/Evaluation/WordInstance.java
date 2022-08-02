@@ -1,5 +1,6 @@
 package Week2.Evaluation;
-
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * 15. Recurring Word Counter
@@ -14,17 +15,27 @@ package Week2.Evaluation;
 public class WordInstance {
 
     public static void main(String[] args){
-
+        System.out.println(wordCount("olly olly in come free"));
     }
 
 	public static Map<String, Integer> wordCount(String string) {
         
-        //find each unique word
-        //count its occurrence 
-        //split the string
+        //hashmap
+        Map<String, Integer> hashMap = new HashMap<>();
 
+        //create an array
+        String [] words = string.split(" ");
 
-        return null;
+        for (String word : words){
+            Integer num = hashMap.get(word);
+            if(num == null){
+                hashMap.put(word,1);
+            } else {
+                hashMap.put(word, num + 1);
+            }
+        }
+
+        return hashMap;
 	}
     
 }
