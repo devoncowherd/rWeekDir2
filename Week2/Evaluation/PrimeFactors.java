@@ -11,31 +11,33 @@ import java.util.*;
 
 public class PrimeFactors {
 
-    public static void main(String [] args){
-
+    public static void main(String [] args) {
+        System.out.println(calculatePrimeFactorsOf(77));
     }
 
 	public static List<Long> calculatePrimeFactorsOf(long l) {
         List<Long> list = new ArrayList<Long>();
 
-        if(l % 2 == 0){
+        if(l % 2 == 0) {
             list.add((long)2);
         }
 
-        if(l % 3 == 0){
+        if(l % 3 == 0) {
             list.add((long)3);
         }
-        for(int i = 5; i <= l; i++){
-            if(l % (long)i == 0){
-                for(int j = 2; j < i; j++){
-                    
+        for(int i = 5; i < l; i++) {
+            if(l % (long)i == 0) {
+                for(int j = 2; j < i; j++) {
+                    if(i % j == 0) {
+                        break;
+                    }
+                    if(!list.contains((long)i)) {
+                        list.add((long)i);
+                    }
                 }
             }
         }
 
         return list;
 	}
-
-
-    
 }

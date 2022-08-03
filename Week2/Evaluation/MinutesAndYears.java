@@ -45,7 +45,6 @@ public class MinutesAndYears {
                         remainingDays++;
                     }
                     years = days/365;
-                    System.out.println(years);
                 }
 
 
