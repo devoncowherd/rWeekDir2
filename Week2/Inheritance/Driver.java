@@ -7,6 +7,10 @@ public class Driver {
 
         //octal test
         System.out.println(053 == 43);
+
+        for(int x = 0; args.length > x++;){
+            System.out.println(args[x]);
+        }
     }
     
 }
