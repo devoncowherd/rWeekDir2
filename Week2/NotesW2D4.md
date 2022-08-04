@@ -67,8 +67,18 @@ final class Dragon(){
 
 ### Abstraction
 
-- 
+- Abstract methods **CANNOT** have function bodies `{}`
+    - Normal methods **MUST** have bodies
 
 ```java
+class Calculator{
+    //non-abstract method
+    public void addNumber(int a, int b){
+        System.out.println("Sum: " + (a + b));
+    }
 
+    //abstract version
+    public abstract void multiply(int a, int b);
+
+}
 ```
