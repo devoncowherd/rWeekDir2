@@ -82,3 +82,111 @@ class Calculator{
 
 }
 ```
+
+### Exercise
+
+It's a list of specific programs
+Exercises:
+
+1. Create an abstract class 'Parent' with a method 'message'. It has two subclasses each having a method with the same name 'message' that prints "This is first subclass" and "This is second subclass" respectively. Call the methods 'message' by creating an object for each subclass.
+
+2. Create an abstract class 'Bank' with an abstract method 'getBalance'. $100, $150 and $200 are deposited in banks A, B and C respectively. 'BankA', 'BankB' and 'BankC' are subclasses of class 'Bank', each having a method named 'getBalance'.Call this method by creating an object of each of the three classes.
+
+3. We have to calculate the percentage of marks obtained in three subjects (each out of 100) by student A and in four subjects (each out of 100) by student B. Create an abstract class 'Marks' with an abstract method 'getPercentage'. It is inherited by two other classes 'A' and 'B' each having a method with the same name which returns the percentage of the students. The constructor of student A takes the marks in three subjects as its parameters and the marks in four subjects as its parameters for student B. Create an object for eac of the two classes and print the percentage of marks for both the students.
+
+
+---
+
+### Interfaces
+
+- It is a kind of contract with the child class
+- Must provide implementation for all interface members
+- Interfaces may inherit from other interfaces
+- All methods in an interface are abstract
+
+```java
+interface Phone{
+    void startCamera();
+    
+    void volumeUp();
+
+    void volumeDown();
+
+    void startBixby();
+}
+
+
+class SamsungUltra implements Phone{
+    startCamera(){
+        //...implementation
+    }
+    
+    //...implement all other methods in Phone
+}
+```
+
+- Why interfaces? Use these when a feature ABSOLUTELY requires certain functionality
+    - Bank Interface Example:
+        - EVERY bank requires a `deposit()`
+        - EVERY bank requires a `withdraw()`
+        - EVERY bank requires a `getBalance()`
+
+
+### Interface VS Abstract Classes
+
+- Interfaces are used to achieve 100% abstracation, but abstract classes are used for partial abstraction
+- Interfaces can be used for multiple inheritances whereas abstract classes cannot
+
+```java
+///multiple implementation
+interface A{}
+
+interface B{}
+
+interface C{}
+
+//implemenet multiple with a comma
+class D implements A, B, C{}
+```
+
+***Create free DMV Test website for students***
+
+- You can perform interface chaining by having interfaces `extends` one another one after another
+- `default` = not mandatory to implement
+    - *Reminder `protected` can be seen as public to subclasses outside the same package whereas `default` cannot*
+- You may use static to use the class directly to call a method!!!
+    - **Java 8+**
+-  `default` vs `static`
+    - default = within package but not directly from the class
+    - static = call from anywhere but by class name
+- Best Practice = Batch certain interfaces by what you need or leave them individual. Try not to clump everything
+- Private methods can be used in interfaces in **Java 9+**
+
+- Further encapsulation for **PRIVATE code**
+```java
+interface ITest {
+    default show(){
+        display();
+    }
+
+    private void display(){
+        //do some stuff
+    }
+}
+```
+
+- But **WHY** default implementations?
+    - Plainly, we are forced to implement everything in the interface, so a default implementation already existing doesn't necessarily hurt
+    - Personal thought : this somewhat defeats the purpose of having the compiler let the user to make a custom implementation of said interface method, but I see why it may be useful. This can further allow interfaces to be treated as blueprints much like other parent classes
+
+### Encapsulation
+
+- Packages
+    - Built-in
+    - User-defined
+    - (modules/ folders)
+
+- `public` = anywhere
+- `default` = packace
+- `private` = class only
+- `protected` = package || subclass || subclass && outside package
