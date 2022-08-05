@@ -90,3 +90,13 @@ class Bank {
         - this is a block
     - `finalize` is used to perform cleanup BEFORE an object is garbage collected
         - this is a method
+
+- Top Exceptions
+    
+    1. `NullPointerException`
+    2. `ArrayIndexOutOfBounds`
+    3. `StackOverflowException`
+    4. `ClassCastException`
+    5. `IllegalArgumentException`
+    6. `NumberFormatException`
+    
