@@ -100,3 +100,97 @@ class Bank {
     5. `IllegalArgumentException`
     6. `NumberFormatException`
     
+### Java IO
+
+```java 
+File file = new File("data.txt");
+```
+
+- Above, a new instance of the file class is created!
+- **Use the following:**
+- `File` = file class
+- `import java.io.*;` = necessary for library
+- `<filename>.createNewFile()` = creates new file
+- `<filename>.mkdir()` = creates a directory
+
+- `.list()`
+```java
+javaString [] list = fileName.list()
+```
+
+- `new File("fileName.fileExtension")` or `new File("fileName.fileExtension", <desired subdirectory>)`
+
+```java
+//subdirectory example
+File dir = new File("db");
+//directory created in current directory
+dir.mkdir();
+File file = newFile("db"), "newFile.fileExtension");
+
+//always wrap file creation in a try/catch in-case the file exists already
+try{
+    file.createNewFile();
+} catch(IOException e){
+    e.printStackTrace();
+}
+```
+
+### Writing to Files
+
+- `FileWriter`
+    - Writes to file
+    - (Default behavior) Overwrites existing file
+    - Constructor 1: `FileWriter fw = new FileWriter(String fileName)`
+    - Constructor 2: `FileWriter fw = new FileWriter(File fileName)`
+    - Constructor 3: `FileWriter fw = new FileWriter(File fileName, true)` second parameter (true/false) to append
+    - Wrap in a `try{}catch(){}` block
+
+```java
+File logs = new File("logs.txt");
+
+if(logs.exists()) {
+FileWriter fw = new FileWriter(file, true);
+//AMAZING! This is a common way .txt logs are created!
+fw.write(100);
+fw.write("\n");
+fw.write("Here's a message~!");
+fw.write("\n");
+char[] c1 = {'h','e','l','l','o'};
+fw.write(c1);
+fw.write("\n");
+
+fw.flush();
+fw.close();
+}
+```
+- `BufferedWriter` = ?
+- `PrintWriter` = ?
+- `Scanner(System.in)` = Useful for getting user input
+
+### Typecasting
+
+- Implicit = wider casting
+- Explicit = narrow casting
+- **Every data type has a different size, so only use the size you need!**
+- Hierarchies:
+    - unsigned `long` ->signed `long` -> `double` -> `float` -> `int` -> `short` -> `byte` 
+- Glass of water analogy...! implicit = higher to lower whereas explicit must be done manually
+
+```java
+    //implicitly okay
+    long a = 1234.567;
+    double b = a;
+    int c = a;
+
+    //must be explicity handled now
+    b = (double)c;
+    a = (long)b;
+
+```
+
+### Wrapper Class
+
+- This is a mechanism to convert primitive types into objects and vice versa
+- Boxing/Autoboxing
+    - **Automatic** conversion into its corresponding class is known as auto**boxing**
+    - **Automatic** conversion into primitive types is auto**unboxing**
