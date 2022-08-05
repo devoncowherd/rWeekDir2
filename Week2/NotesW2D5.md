@@ -41,3 +41,52 @@ try{
     System.out.println("We attempted an API call!");
 }
 ```
+
+- Custom Exceptions
+
+```java
+///bank app example
+class InsufficientFundsException extends Exception {
+    
+    public InsufficientFundsException(){
+        System.out.println("Insufficient Funds");
+    }
+
+
+}
+
+class Bank {
+    long balance;
+
+    //...
+
+    public void withdraw(int amount){
+        if(amount <= balance){
+            this.balance = (long)(this.balance - amount);
+        } else {
+            throw InsufficientFundsException();
+        }
+    }
+
+    //...
+}
+```
+
+
+- `throw` vs `throws`
+    - `throw` 
+        - is used to throw an exception manually
+        - (compiletime)checked exception cannot be propogated using throw only
+        - It's followed by an instance
+    - `throws` 
+        - is used to declare an exception
+        - This is used within a method
+        - This is followed by a class name
+
+- `final` vs `finally` vs `finalize` 
+    - `final` is used to apply restriction upon variables, methods, and classes
+        - this is a keyword
+    - `finally` is used to execute important code at the end of a `try{}catch(){}` block (optionally)
+        - this is a block
+    - `finalize` is used to perform cleanup BEFORE an object is garbage collected
+        - this is a method
