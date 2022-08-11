@@ -42,33 +42,124 @@ You are expected to complete the following requirements and give a 5 minute pres
 ### Classes
 
 - **User**
-    - Can login
-    - Can logout
-    - Create Accounts
-    - Delete Accounts
-    - Select An Account
+   
+    - []Can login
+    - []Can logout
+    - []Create Accounts
+    - []Delete Accounts
+    - []Select An Account
+
 - **Account**
-    - Deposit
-    - Withdraw
-    - Check Account
-    - Send Money
-    - Accept Motney
-    - View All Transactions
-    - Transfer to Connected Account
-- **Employee**
+   
+    - []Deposit
+    - []Withdraw
+    - []Check Account
+    - []Send Money
+    - []Accept Motney
+    - []View All Transactions
+    - []Transfer to Connected Account
+    
+- ***Employee***
 
-    - Login
-    - Perform Transactions
-    - View Accounts
-    - Open Account for Customer
-    - Reject Account
-    - Close Account
+    - []Credentials
+        - []username
+        - []password
+    - []Perform Transactions
+    - []View All Accounts
+        - []See Queue
+    - []Open Account for Customer
+        - []Create Account
+    - []Reject Account
+        - []Reject Item in Queue
+    - []Close Account
+        - []Remove Account
 
-### Database 
+- ***Dao***
+    
+    - []set all functions for database
+        - []get account balance
+        - []deposit
+        - []withdraw
+        - []transfer
+        - []validate withdraw
+        - []validate deposit
+        - []validate transfer
+
+- ***DAO IMPL***
+
+    - []Implement all dao functions
+
+-  ***"UI" Layer:***
+    - []Console Interaction Class
+    - []Select Employee or Customer
+    - []ConsoleLoginInterface()
+        - Methods:
+            - []setUserType()
+                - []Take Byte
+            - []getUserType()
+                - []Take Byte
+    - []ConsoleLoginImpl()
+
+- ***Candidate:***
+    - [x]Variables:
+        - [x]firstName
+        - [x]lastName
+        - [x]middleName
+        - [x]social
+        - [x]dateOfBirth
+        - [x]address
+        - [x]zipCode
+        - [x]email
+        - [x]phoneNumber
+        - [x]username
+        - [x]accountType
+    - []Functions
+        - [x] set first name
+        - [x] set last name
+        - [x] set middle name
+        - [x] set social
+        - [x] set date of birth
+        - [x] set address
+        - [x] set zip code
+        - [x] set email
+        - [x] set phone number
+        - [x] set username
+        - [x] set account type
+    - [] REGEX form validation
+    
+- ***Formatter:***
+    - []Methods:
+        - []validateName
+        - []validateSocial
+        - []validateDateOfBirth
+        - []validateAddress
+        - []validateZip
+        - []validateEmail
+        - []validatePhone
+        - []validateUsername
+    
+### Database
+
+- []MySQL
+
+
+
 
 ### Error Safety
 
-- Preent overdraw
-- Prevent SQL Injection
-- Protect Passwords
-- Prevent invalid entries (such as negative money deposit)
+- []Account
+    - []Prevent overdraw
+    - []Prevent SQL Injection
+    - []Protect Passwords
+    - []Prevent invalid entries (such as negative money deposit)
+- []Login
+    - [x]InputMismatchException for Cust/Emp/Sign choice
+- []SignUp
+    - []Prevent duplicate candidates and clients from being generated
+
+# References
+
+### Regex
+
+- https://onlinehelp.opswat.com/dlp/1.3_Sample_regular_expressions.html
+- https://mkyong.com/regular-expressions/how-to-validate-username-with-regular-expression/
