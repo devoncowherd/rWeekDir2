@@ -69,10 +69,14 @@ You are expected to complete the following requirements and give a 5 minute pres
         - []See Queue
     - []Open Account for Customer
         - []Create Account
+        - []Save Date Registered
     - []Reject Account
         - []Reject Item in Queue
+        - []Save Date Rejected
     - []Close Account
         - []Remove Account
+        - []Save Date Closed
+        - []Active Boolean to False
 
 - ***Dao***
     
@@ -125,24 +129,47 @@ You are expected to complete the following requirements and give a 5 minute pres
         - [x] set phone number
         - [x] set username
         - [x] set account type
-    - [] REGEX form validation
+        - [] generate form
+            - []ask for all required data
+    - [x] REGEX form validation
     
 - ***Formatter:***
-    - []Methods:
-        - []validateName
-        - []validateSocial
-        - []validateDateOfBirth
-        - []validateAddress
-        - []validateZip
-        - []validateEmail
-        - []validatePhone
-        - []validateUsername
+    - [x]Methods:
+        - [x]validateName
+        - [x]validateSocial
+        - [x]validateDateOfBirth
+        - [x]validateAddress
+        - [x]validateZip
+        - [x]validateEmail
+        - [x]validatePhone
+        - [x]validateUsername
     
 ### Database
 
-- []MySQL
-
-
+- [x]MySQL
+- [x]DATABASE cowherd_bank
+    - []TABLE employee
+        - first_name
+            - Nire
+        - last_name
+            - Letiv
+        - middle_name
+            - NULL
+        - department
+            - Investment Management and Accounts
+        - job_title
+            - Admin
+        - date_of_birth
+            - 01-28-2004
+        - social 
+            - 999-99-9999
+        - zip_code
+        - branch_location
+        - hire_date
+        - phone_number
+        - email
+        - employee_id
+        - salary
 
 
 ### Error Safety
