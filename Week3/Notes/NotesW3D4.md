@@ -26,4 +26,8 @@
     - creates value for each in a given column
     - `create unique index <index_name> on <table_name>(col1,col2);`
 - clustered
+    - table where data for rows is stored
+    - defines the order of the table data
+    - can only have one clustered index
+    - you may make a clustered index based on primary key
 - non-clustered

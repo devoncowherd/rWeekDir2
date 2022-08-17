@@ -28,3 +28,44 @@ INSERT INTO employee_canada(id,name,email) VALUES(2, 'Vi', 'v@gmail.com');
     - right outer = right join
 
 
+- inner join example
+
+```sql
+inner join
+```
+
+
+### View
+- A virtual table
+- This database has no tables
+- it contains rows and columns similar to a real table
+
+```sql
+CREATE TABLE employee (id int NOT NULL AUTO_INCREMENT, name char(50), age int, status int);
+
+
+INSERT INTO employee(name, age,status) VALUES('mark', 24,1);
+INSERT INTO employee(name, age,status) VALUES('paul', 24,1);
+INSERT INTO employee(name, age,status) VALUES('watsonl', 24,1);
+
+
+CREATE VIEW emp_active AS SELECT * FROM employee WHERE status = 1;n
+```
+
+### Transition Control Language (TCL)
+
+- ACID 
+    - atomicity
+        - ensures all operations go successfully, or the operation itself is aborted
+    - consistency
+        - Obviously, the database should remani consistent. Preserve the values
+    - isolation
+        - Guarantees that each transaction is individually processed
+    - durability
+        - DATA PERSISTENCE!
+
+CAP Theorem
+
+- consistency
+- availability
+- partition
