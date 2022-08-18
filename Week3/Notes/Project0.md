@@ -23,11 +23,11 @@ You are expected to complete the following requirements and give a 5 minute pres
 * 5As the system, I reject invalid transactions. ✅
 * 6Ex: * A withdrawal that would result in a negative balance. ✅
 * 7A deposit or withdrawal of negative money. ✅
-* 9As an employee, I can approve or reject an account. 
+* 9As an employee, I can approve or reject an account. ✅
 * 10As an employee, I can view a customer's bank accounts. ✅
-* 11As a user, I can register for a customer account. 
-* 12As a customer, I can post a money transfer to another account. 
-* 13As a customer, I can accept a money transfer from another account. 
+* 11As a user, I can register for a customer account. ✅
+* 12As a customer, I can post a money transfer to another account. ✅
+* 13As a customer, I can accept a money transfer from another account. ✅
 * 14A an employee, I can view a log of all transactions.
 
 5/15
