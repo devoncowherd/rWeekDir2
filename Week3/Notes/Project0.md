@@ -28,7 +28,7 @@ You are expected to complete the following requirements and give a 5 minute pres
 * 11As a user, I can register for a customer account. ✅
 * 12As a customer, I can post a money transfer to another account. ✅
 * 13As a customer, I can accept a money transfer from another account. ✅
-* 14A an employee, I can view a log of all transactions.
+* 14A an employee, I can view a log of all transactions.✅
 
 5/15
 
@@ -46,8 +46,8 @@ You are expected to complete the following requirements and give a 5 minute pres
    
     - [x]Can login
     - [x]Can logout
-    - []Create Accounts
-    - []Delete Accounts
+    - [x]Create Accounts
+    - [x]Delete Accounts
     - [x]Select An Account
 
 - **Account**
@@ -55,10 +55,10 @@ You are expected to complete the following requirements and give a 5 minute pres
     - [x]Deposit
     - [x]Withdraw
     - [x]Check Account
-    - []Send Money
-    - []Accept Motney
-    - []View All Transactions
-    - []Transfer to Connected Account
+    - [x]Send Money
+    - [x]Accept Motney
+    - [x]View All Transactions
+    - [x]Transfer to Connected Account
     
 - ***Employee***
 
@@ -172,27 +172,27 @@ You are expected to complete the following requirements and give a 5 minute pres
         - [x]employee_id
             - 9999
         - [x]salary
-    []TABLE candidate
-        - []firstName
-        - []lastName
-        - []middleName
-        - []social
-        - []dateOfBirth
-        - []address
-        - []zipCode
-        - []email
-        - []phoneNumber
-        - []username
-        - []accountType
+    [x]TABLE candidate
+        - [x]firstName
+        - [x]lastName
+        - [x]middleName
+        - [x]social
+        - [x]dateOfBirth
+        - [x]address
+        - [x]zipCode
+        - [x]email
+        - [x]phoneNumber
+        - [x]username
+        - [x]accountType
 
 ### Error Safety
 
-- []Account
-    - []Prevent overdraw
-    - []Prevent SQL Injection
-    - []Protect Passwords
-    - []Prevent invalid entries (such as negative money deposit)
-- []Login
+- [x]Account
+    - [x]Prevent overdraw
+    - [x]Prevent SQL Injection
+    - [x]Protect Passwords
+    - [x]Prevent invalid entries (such as negative money deposit)
+- [x]Login
     - [x]InputMismatchException for Cust/Emp/Sign choice
 - []SignUp
     - []Prevent duplicate candidates and clients from being generated

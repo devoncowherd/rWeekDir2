@@ -61,4 +61,32 @@ public class SortingExample {
     - ...like a conveyor belt of bits
     - Functional in nature
     - It doesn't change any of the input
+    - Features:
+        - It doesn't store elements only conveys them
+        - No elements are filtered
+        - Evaluates code only when required (lazy)
+        - Elements on the stream are only visible once, so capture them where necessay
+    - Stream methods:
+        - `filter()`
+        - `map()`
+        -   
 - Provides additional package: `java.util.stream`
+
+
+```java 
+import java.util.ArrayList;
+import java.util.stream;
+
+public class StreamExample{
+    public static void main(String [] args){
+
+        Stream<String> testStream = Stream.empty();
+
+        ArrayList<Integer> arrayList = new ArrayList<>();
+        for(int x = 0; x<11; x++){
+            arrayList.add(x);
+        }
+
+    }
+}
+```
