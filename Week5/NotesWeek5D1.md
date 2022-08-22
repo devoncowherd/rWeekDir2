@@ -45,4 +45,53 @@
     - impements a runnable interface
 
 ```java
+class MultiThreadDemo extends Thread{
+    @Override
+    public void run(){
+        System.out.println("This thread is running...");
+    }
+}
+
+
+public class Main {
+    public static void main(String [] args){
+        MultiThreadDemo threadDemo = new MultiThreadDemo();
+        threadDemo.run();
+    }
+}
 ```
+
+### You can do that ... OR!
+
+
+```java
+class MultiThreadDemo implements Runnable {
+    @Override
+    public void run(){
+        System.out.println("This is running on another thread...!");
+    }
+}
+
+public class Main{
+    public static void main(String[] args){
+        MultiThreadDemo threadDemo = new MultiThreadDemo();
+        Thread t1 = new Thread(threadDemo);
+        t1.start();
+    }
+}
+
+```
+
+- Runnable is considered better because it's reusable (it can be extended by any other interface)
+
+### Thread Lifecycle
+
+- Stages:
+    - New
+    - Runnable
+    - Running
+    - Terminated 
+    - Non-Runnable
+
+- JVM controls the lifecycle of the thread in Java 
+
