@@ -95,3 +95,34 @@ public class Main{
 
 - JVM controls the lifecycle of the thread in Java 
 
+### Thread Scheduler
+
+- Part of the JVM
+- Decides which thread should be run
+- No guarantee which thread will be run at a specific time
+- This utilizes time-slicing
+- `sleep()`
+    - This is used to set aside a task for a specified amount of time
+- Even if you extend Thread, if you don't use the `start()` method, and instead you call the methods in the class extending Thread or implementing Runnable, you will cause it to join the stack normally instead of starting a new stack
+
+### Naming Thread
+
+- `getName()` 
+    - find the name of the thread
+- `setName(name)`
+    - use to change the name of the thread
+- `getCurrentThread()`
+    - return the information of the current thread
+- `join()`
+    - used to execute one thread completely
+
+### Thread Pool
+
+- A collection of previously created Threads
+- Efficiently executes async callbacks
+- Reduces the number of application threads
+- It's best to recycle threads for efficiency
+
+### Thread Naming
+
+- Call extend the class, name the  
