@@ -35,11 +35,25 @@
             -  `addCookie()`
             -  `getCookie()`
     - Hidden Form Field
+        - invisible fields used for maintaining the state of the user
+        - extremely vulnerable to knowledgeable users
     - URL Rewriting
     - HTTP Session
-
     - SendRedirect
         - This will redirect the response
         -  `sendRedirect()`
+
+    - Forward     
         - `forward()`
 
+- URL rewriting
+    - append a url of the next servlet for key/value pairs
+    - url limit = 1044 characters
+    - Advantages
+        - it will always work with or without cookies
+            - privacy concerns
+        - extra form submission is not required
+    - Disadvantages
+        - it will only work with link
+        - it can send only textual information
+        - data will be visible in the browser
