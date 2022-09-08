@@ -37,3 +37,4 @@
     - session factory, session, and second-level cache
     - config, query
     - first-level cache
+

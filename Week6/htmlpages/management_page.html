@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+            <style>
+                body {
+                    background-color: rgba(20,20,20);
+                    color: whitesmoke;
+                    font-family: 'Oswald', sans-serif;
+                    text-align: center;
+                    font-size: 1.5em;
+                }
+
+                .dividerLight {
+                    border-bottom: dotted white 2px;
+                    width: 100%;
+                }
+
+                .dividerDark {
+                    border-bottom: dotted rgb(20,20,20) 2px;
+                    width: 100%;
+                }
+                main {
+                    text-align: left;
+                    margin-top: 5%;
+                    margin-left:25%;
+                    margin-right:25%;
+                    margin-bottom:5%;
+
+                }
+
+                form {
+                    margin: 0px;
+                    padding:0px;
+                }
+
+                h2 {
+                    margin: 0px;
+                }
+
+                input {
+
+                    font-size:1em;
+                }
+
+            </style>
+        </head>
+    <body>
+        <header></header>
+        <main>
+            <h3>Welcome, $ate Management!</h3>
+            <div class="dividerLight"></div>
+            <br>
+            <input type="submit" value="Show All Employees" class="allEmployeeButton">
+            <br>
+            <!--Chunk1-->
+            <table class="allEmployeeTable">
+                <th>
+                    <td>EmpID</td>
+                    <td>Name</td>
+                    <td>Email</td>
+                    <td>Dept.</td>
+                </th>
+            </table>
+            <!--Chunk2-->
+            <input type="submit" value="Show All Reimbursement Request" class="allReimbursementButton">
+            <br>
+            <table class="allReimbursementTable">
+                <th>
+                    <td>TransID</td>
+                    <td>EmpID</td>
+                    <td>Amount</td>
+                    <td>ReceiptLink</td>
+                    <td>Desc.</td>
+                    <td>Status</td>
+                    <td>Date</td>
+                </th>
+            </table>
+            <!--Chunk3-->
+            <input type="submit" value="Show All Pending Reimbursements" class="allPendingButton">
+            <br>
+            <table  class="allPendingTable">
+                <th>
+                    <td>TransID</td>
+                    <td>EmpID</td>
+                    <td>Amount</td>
+                    <td>ReceiptLink</td>
+                    <td>Desc.</td>
+                    <td>Status</td>
+                    <td>Date</td>
+                </th>
+            </table >
+            <!--Chunk4-->
+            <input type="submit" value="Show All Resolved Requests" class="allResolvedButton">
+            <br>
+            <table class="allResolvedTable">
+                <th>
+                    <td>TransID</td>
+                    <td>EmpID</td>
+                    <td>Amount</td>
+                    <td>ReceiptLink</td>
+                    <td>Desc.</td>
+                    <td>Status</td>
+                    <td>Date</td>
+                </th>
+            </table>
+            <!--Chunk5-->
+            <form method="post" action="edit">
+                <input type="submit" value="Update Reimbursement Request">
+            </form>
+            <!--Chunk6-->
+            <input type="submit" value="Logout" onclick="form.action='LoginServlet'">
+            
+        </main>
+        <footer></footer>
+    </body>
+</html>
+<script>
+    console.log("Script Loaded");
+    let allEmployeeTable = document.querySelector(".allEmployeeTable");
+    let allReimbursementTable = document.querySelector(".allReimbursementTable");
+    let allPendingTable = document.querySelector(".allPendingTable");
+    let allResolvedTable = document.querySelector(".allResolvedTable");
+    
+    let allEmployeeButton = document.querySelector(".allEmployeeButton");
+    let allReimbursementButton = document.querySelector(".allReimbursementButton");
+    let allPendingButton = document.querySelector(".allPendingButton");
+    let allResolvedButton = document.querySelector(".allResolvedButton");
+
+
+    
+    allEmployeeTable.setAttribute("hidden", "true");
+    allReimbursementTable.setAttribute("hidden", "true");
+    allPendingTable.setAttribute("hidden", "true");
+    allResolvedTable.setAttribute("hidden", "true");
+
+    allEmployeeButton.addEventListener("click", ()=>{
+        console.log("clicked");
+        if(allEmployeeTable.hasAttribute("hidden")){
+            allEmployeeTable.removeAttribute("hidden");
+        } else {
+            allEmployeeTable.setAttribute("hidden","true")
+        }
+    });
+    allReimbursementButton.addEventListener("click", ()=>{
+        console.log("clicked");
+        if(allReimbursementTable.hasAttribute("hidden")){
+            allReimbursementTable.removeAttribute("hidden");
+        } else {
+            allReimbursementTable.setAttribute("hidden","true")
+        }
+    });
+    allPendingButton.addEventListener("click", ()=>{
+        console.log("clicked");
+        if(allPendingTable.hasAttribute("hidden")){
+            allPendingTable.removeAttribute("hidden");
+        } else {
+            allPendingTable.setAttribute("hidden","true")
+        }
+    });
+    allResolvedButton.addEventListener("click", ()=>{
+        console.log("clicked");
+        if(allResolvedTable.hasAttribute("hidden")){
+            allResolvedTable.removeAttribute("hidden");
+        } else {
+            allResolvedTable.setAttribute("hidden","true")
+        }
+    });
+
+
+</script>

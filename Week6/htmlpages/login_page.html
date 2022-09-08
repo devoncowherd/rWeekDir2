@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <style>
+        body {
+            background-color: rgba(20,20,20);
+            color: whitesmoke;
+            font-family: 'Oswald', sans-serif;
+            text-align: center;
+            font-size: 1.5em;
+        }
+
+        .dividerLight {
+            border-bottom: dotted white 2px;
+            width: 100%;
+        }
+
+        .dividerDark {
+            border-bottom: dotted rgb(20,20,20) 2px;
+            width: 100%;
+        }
+        main {
+            text-align: left;
+            margin-top: 5%;
+            margin-left:25%;
+            margin-right:25%;
+            margin-bottom:5%;
+
+        }
+
+        form {
+            max-width: 500px;
+            background-color: whitesmoke;
+            color: rgb(20,20,20);
+            padding:24px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        h2 {
+            margin: 0px;
+        }
+
+        input {
+
+            font-size:1em;
+        }
+    </style>
+    <script defer>
+
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <h1>$ate</h1>
+</header>
+<div class="dividerLight"></div>
+<main>
+    <form name="loginForm" method="post" action="loginServlet">
+        <h2>Login</h2>
+            <div class="dividerDark"></div>
+            <label for="loginEmail">Email:</label>
+            <br>
+            <input type="text"
+                   id="loginEmail"
+                   class="loginEmail"
+                   min="5" max="150"
+                   pattern="
+\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b"
+                   title="email@email.com"
+            >
+            <br>
+            <label for="loginPassword">Password:</label>
+            <br>
+            <input id="loginPassword" name="loginPassword" type="password" min="5" max="150">
+            <br>
+            <input class="loginSubmit" type="submit" value="Submit">
+    </form>
+</main>
+<footer></footer>
+</body>
+</html>
